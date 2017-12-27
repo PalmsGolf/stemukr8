@@ -65,23 +65,22 @@ and open the template in the editor.
       <div id="sidebar" class="nav-collapse">
         <ul class="sidebar-menu">         
           <li class="sub-menu">
-            <a href="admin_kab_schools.html" class="">
-                          <i class="icon_table"></i>
-                          <span>Schools</span>
-                      </a>
-          </li>
-          
-          <li class="sub-menu">
-            <a href="admin_kab_directors.html" class="">
-                          <i class="fa fa-user"></i>
-                          <span>Directors</span>
-                      </a>
-          </li>
-          
-          <li class="sub-menu">
-            <a href="admin_kab_admins.html" class="">
+            <a href="admin_kab_admin.html" class="">
                           <i class="fa fa-user"></i>
                           <span>Administrators</span>
+                      </a>
+          </li>
+          <li class="sub-menu">
+            <a href="admin_kab_groups.html" class="">
+                          <i class="icon_table"></i>
+                          <span>Groups</span>
+                      </a>
+          </li>
+          
+          <li class="sub-menu">
+            <a href="admin_kab_teachers.html" class="">
+                          <i class="fa fa-user"></i>
+                          <span>Teachers</span>
                       </a>
           </li>
         </ul>
@@ -94,10 +93,11 @@ and open the template in the editor.
         <!--Path and name-->
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-table"></i> New school</h3>
+            <h3 class="page-header"><i class="fa fa-table"></i> New teacher</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="fa fa-table"></i>New School</li>
+              <li><i class="fa fa-home"></i><a href="admin_kab_admin.html">Home</a></li>
+              <li><i class="fa fa-table"></i><a href="admin_kab_teachers.html">Teachers</a></li>
+              <li><i class="fa fa-table"></i>New</li>
             </ol>
           </div>
         </div>
@@ -107,7 +107,7 @@ and open the template in the editor.
         <form class="form-horizontal" role="form" method="POST" action="/register">
                <div class="row">
                    <div class="col-md-12">
-                       <h1 class="cover-heading uppercase">Register a new school:</h1>
+                       <h1 class="cover-heading uppercase">Register a new teacher:</h1>
                        <hr class="hr-style">
                    </div>
                </div>
@@ -117,7 +117,7 @@ and open the template in the editor.
                  
                  <div class="row centered-form center-block">
                      <div class="col-md-3 field-label-responsive">
-                         <label for="email">School education e-mail address</label>
+                         <label for="email">E-mail address</label>
                      </div>
                      <div class="col-md-6">
                          <div class="form-group">
@@ -136,27 +136,10 @@ and open the template in the editor.
                      </div>
                  </div>
                  
-                 
-                 
-                 <!--Address-->
-                 <div class="row centered-form center-block">
-                     <div class="col-md-3 field-label-responsive">
-                       <label>Physical school address</label>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                 <input type="text" name="address" class="form-control" id="address"
-                                        required autofocus>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 
                  <!--Director-->
                  <div class="row centered-form center-block">
                      <div class="col-md-3 field-label-responsive">
-                       <label>Director username</label> <a href="admin_kab_new_director.html">(Register if needed)</a>
+                       <label>Teacher username</label>
                      </div>
                      <div class="col-md-6">
                          <div class="form-group">
@@ -166,10 +149,38 @@ and open the template in the editor.
                              </div>
                          </div>
                      </div>
-                     
+                 </div>
+                 <!--First name-->
+                 <div class="row centered-form center-block">
+                     <div class="col-md-3 field-label-responsive">
+                       <label>First name</label>
+                     </div>
+                     <div class="col-md-6">
+                         <div class="form-group">
+                             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                 <input type="text" name="director_f" class="form-control" id="director_f"
+                                        required autofocus>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <!--Last name-->
+                 <div class="row centered-form center-block">
+                     <div class="col-md-3 field-label-responsive">
+                       <label>Last name</label>
+                     </div>
+                     <div class="col-md-6">
+                         <div class="form-group">
+                             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                 <input type="text" name="director_l" class="form-control" id="director_l"
+                                        required autofocus>
+                             </div>
+                         </div>
+                     </div>
                  </div>
                  
-                 <!--Password(?)-->
+                 
+                 <!--Password-->
                  <div class="row centered-form center-block">
                      <div class="col-md-3 field-label-responsive">
                          <label for="password">Password</label>
