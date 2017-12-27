@@ -40,8 +40,10 @@ public class Login {
 
             if (userRole.equals(UserRole.TEACHER))
                 return new ModelAndView("redirect:/view/teacher/" + userId);
-            else if (userRole.equals(UserRole.STUDENT))
-                return new ModelAndView("redirect://" + userId);
+            else if (userRole.equals(UserRole.SUPERADMIN))
+                return new ModelAndView("redirect:/admin/" + userId);
+            else
+                return new ModelAndView("redirect:login");
 
         } catch (IOException e) {
             e.printStackTrace();
